@@ -10,6 +10,7 @@
     "express": "~4.9.8",
     "express-session": "~1.16.2",
     "body-parser": "~1.19.0",
-    "mysql": "~2.17.1"  
+    "mysql": "~2.17.1",
+    "path": "~0.12.7"
   }
 }
