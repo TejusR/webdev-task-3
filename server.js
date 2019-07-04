@@ -21,7 +21,7 @@ app.use(session({
 app.use(bodyParser.urlencoded({extended : true}));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
-var port = process.env.port || 3000;
+var port = process.env.PORT || 3000;
 app.get('/', function(request, response) {
 	response.sendFile(path.join(__dirname + '/login.html'));
 });
