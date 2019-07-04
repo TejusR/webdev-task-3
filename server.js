@@ -6,10 +6,10 @@ var path = require('path');
 	var username,curid;
 
 var connection = mysql.createConnection({
-	host     : 'ec2-174-129-29-101.compute-1.amazonaws.com',
-	user     : 'yqncmcbvhsiynf',
-	password : 'e938e82cf9c2a53f850a0032929b1ce6def09a39df6ad7ca0f1e3bd0b91cdcaa',
-	database : 'd52ojao1p3dcbl'
+	host     : 'localhost',
+	user     : 'root',
+	password : 'tejus@123',
+	database : 'login'
 });
 
 var app = express();
