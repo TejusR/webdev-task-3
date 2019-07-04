@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create a new form</title>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <style media="screen">
+     html{
+       background-image:url(https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+     }
+     body{
+       text-align:center;
+     }
+     input[type="text"],input[type="number"]
+     {
+       text-align:center;
+       background:rgb(255,255,255,0);
+       border:none;
+       color:white;
+       width:10em;
+       height:3em;
+       font-size:1.5em;
+       outline:none;
+     }
+        input[type="text"]:focus{
+           border-bottom 0.2em solid red;
+        }
+     .form{
+       border:0.2em solid #cb1fd1;
+       border-radius:1em;
+       width:60em;
+       margin: 0 auto;
+       text-align:center;
+       background:rgb(255,255,255,0.8);
+     }
+     .form h3{
+       font-family: 'Playfair Display', serif;
+       font-size:1.5em;
+     }
+     .form input[type="text"],input[type="number"]
+     {
+       text-align:left;
+       width:90%;
+       height:2em;
+       font-size:1em;
+       color:black;
+       outline:none;
+       transition:0.5s;
+       margin-bottom:2em;
+     }
+     .form input[type="text"]:focus{
+        border-bottom:0.1em solid #cb1fd1;
+     }
+     .form input[type="radio"]{
+       margin-top: 2em;
+       display: inline-block;
+       width:10em;
+     }
+     .form select{
+       text-align: center;
+       margin-right: 2em;
+       width: 8em;
+       background:#cb1fd1;
+       border:none;
+       font-size:1.5em;
+       border-radius:0.2em;
+       margin-bottom:2em;
+       color:#b2fcd1;
+       font-family: 'Libre Franklin', sans-serif;
+       outline:none;
+       padding-left: 2em;
+     }
+     .inp{
+        background:rgb(255,255,255,0);
+       text-align:left;
+       width:40em;
+       height:2em;
+       font-size:1em;
+       color:black;
+       display:inline-block;
+       outline:none;
+       border: none;
+       margin-bottom:2em;
+     }
+     .form button{
+       background:#cb1fd1;
+       border:none;
+       font-size:1.5em;
+       border-radius:0.2em;
+       margin-bottom:2em;
+       color:#b2fcd1;
+       font-family: 'Libre Franklin', sans-serif;
+       outline:none;
+       cursor:pointer;
+     }
+     .form button:hover{
+       background:#481afe;
+     }
+     .sub{
+       background-color: #fabfe5;
+       color: #2c1786;
+       width:8em;
+       height: 3em;
+       border: none;
+       outline: none;
+       cursor: pointer;
+       border-radius: 2em;
+     }
+  </style>
+  <body>
+    <form method="post">
+    <input type="text" name="fname" value="UNTITLED FORM">
+    <div class="form" id="form">
+      <h3>Description</h3>
+      <input type="text" name="des" value="" placeholder="add description">
+      <div class="questions" id="cont">
+      </div>
+      <select id="intype">
+        <option value="text">text</option>
+        <option value="number">number</option>
+      </select>
+      <button type="button" name="add" onclick="addqn(document.getElementById('intype').value)">Add Question</button>
+    </div>
+    <br>
+    <button type="submit" name="submit" formaction="createlink" class="sub" id="subbut">submit</button>
+  </form>
+  </body>
+  <script type="text/javascript">
+   var i=1;
+   function addqn(type)
+    {
+      document.getElementById("subbut").value=i;
+      var x=document.createElement("INPUT");
+      var a=document.getElementById("cont");
+      var b=document.getElementById("form");
+      x.setAttribute("type","text");
+      x.setAttribute("name","q"+i);
+      x.setAttribute("value"," Question"+i);
+      a.appendChild(x);
+      var ans=document.createElement("input");
+      ans.setAttribute('readonly',true);
+      ans.setAttribute("value",type);
+      ans.setAttribute("type","text");
+      ans.setAttribute("name","a"+i);
+      a.appendChild(ans);
+      i++;
+    }
+  </script>
+</html>

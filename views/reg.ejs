@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>welcome</title>
+  </head>
+  <style media="screen">
+    html{
+      background-color: #ef6039;
+    }
+    .reg-form{
+      text-align: center;
+      border-radius: 2em;
+      border: 0.2em solid #320e74;
+      background-color: rgb(255,255,255,0.5);
+      width: 500px;
+      margin: 7em auto;
+      color: #320e74;
+      font-family: Tahoma, Geneva, sans-serif;
+      display: block;
+    }
+    .reg-form input{
+      width:80%;
+      height: 3em;
+      border-radius: 2em;
+      margin-bottom: 2em;
+      outline:none;
+      border: 0.2em solid #320e74;
+    }
+    .reg-form button{
+      width:60%;
+      height: 3em;
+      background-color: #320e74;
+      border-radius: 2em;
+      cursor: pointer;
+      margin-bottom: 2em;
+      color:#ef6039;
+      border: 0.1em solid #ef6039;
+    }
+  </style>
+  <body>
+     <div class="reg-form">
+       <h1>CREATE NEW ACCOUNT</h1>
+       <form method="post">
+       <input type="text" name="user" value="" placeholder="USERNAME" required><br>
+       <input type="password" name="pass" value="" placeholder="password" required><br>
+       <button type="submit" name="submit" formaction="createaccount">Create ACCOUNT</button>
+     </form>
+     </div>
+     <p style="text-align:center; color: #320e74;"><%= message %></p>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    html{
+      background-color:#b817ca;
+      text-align:center;
+    }
+    h1{
+      color:#dfda98;
+    }
+    .form{
+      text-align:center;
+      width:300px;
+      color:#200577;
+      margin:2em auto;
+      background-color:rgb(255,255,255,0.5);
+    }
+  </style>
+  <body>
+    <h1>Responses</h1>
+    <div class="form" id="form">
+    <% for(var k=0;k<a.length;k++){%>
+    <% for(var i=0;i<q.length;i++){%>
+      <b><%= q[i].question %></b>
+      <p><%=JSON.parse(a[k].ans).answers[i] %></p>
+    <%}%>
+    <hr>
+    <%}%>
+    </div>
+  </body>
+</html>

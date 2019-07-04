@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bangers|Special+Elite&display=swap" rel="stylesheet">
+  </head>
+  <style media="screen">
+    html{
+        margin: 0;
+        padding:0;
+        background-color: #45dbdd;
+        display:block;
+    }
+    body{
+      margin: 0;
+    }
+    .selform{
+      text-align: center;
+      display: block;
+      width:500px;
+      margin:auto;
+      padding-top: 6em;
+    }
+    .selform h1{
+      font-family: 'Special Elite', cursive;
+      color: #cc0fc9;
+      text-align:center;
+      font-size:50px;
+    }
+    .bg{
+      margin-top: 3em;
+      background-color: rgb(255,255,255,0.5);
+      width: 100%;
+      border-radius: 3em;
+    }
+    .todoform{
+      padding-bottom: 2em;
+    }
+    .todoform button
+    {
+      font-family: 'Bangers', cursive;
+      font-size: 1em;
+      background-color:#df8415;
+      color: #c4fbf7;
+      border-radius: 3em;
+      width:80%;
+      height: 4em;
+      margin:0 auto;
+      cursor:pointer;
+      display:block;
+      border: none;
+    }
+    .todoform button:hover{
+      background-color: #f45727;
+    }
+  </style>
+  <body>
+    <div class="selform">
+      <h1>Select a Form</h1>
+     <div class="bg">
+      <form method="post" class="todoform">
+      <br><br>
+      <% for(var i=0;i<forms.length;i++){%>
+        <button type="submit" name=<%="response"+i %> formaction=<%= "responses/"+i %>><%= forms[i].name %></button><br>
+      <%}%>
+    </form>
+  </div>
+  </div>
+  </body>
+</html>

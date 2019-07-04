@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Bangers|Special+Elite&display=swap" rel="stylesheet">
+    <title><%= user%></title>
+    <style media="screen">
+     html{
+         margin: 0;
+         padding:0;
+         background-color: #45dbdd;
+         display:block;
+     }
+     body{
+       margin: 0;
+     }
+     .wrap{
+     }
+      .todo{
+        text-align: center;
+        display: block;
+        width:500px;
+        margin:auto;
+        padding-top: 6em;
+      }
+      .todo h1
+      {
+        font-family: 'Special Elite', cursive;
+        color: #cc0fc9;
+        text-align:center;
+        font-size:50px;
+      }
+      .bg{
+        margin-top: 3em;
+        background-color: rgb(255,255,255,0.5);
+        width: 100%;
+        border-radius: 3em;
+      }
+      .bg h2{
+        font-family: 'Amatic SC', cursive;
+        color: #cc0fc9;
+        text-align:center;
+        font-size:30px;
+      }
+      .todoform{
+        padding-bottom: 2em;
+      }
+      .todoform button
+      {
+        font-family: 'Bangers', cursive;
+        font-size: 1em;
+        background-color:#df8415;
+        color: #c4fbf7;
+        border-radius: 3em;
+        width:80%;
+        height: 4em;
+        margin: 3em auto;
+        cursor:pointer;
+        display:block;
+        border: none;
+      }
+      .todoform button:hover{
+        background-color: #f45727;
+      }
+    </style>
+  </head>
+  <body>
+     <div class="todo">
+        <h1>Welcome, <%=user%></h1>
+        <div class="bg">
+          <h2>What do want to do?</h2>
+         <form class="todoform"method="post">
+           <button type="submit" name="create" formaction="create">create a new form</button>
+           <button type="submit" name="responses" formaction="check">Check your responses</button>
+         </form>
+       </div>
+      </div>
+  </body>
+</html>

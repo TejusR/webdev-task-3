@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><%=questions[0].name %></title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin|Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <style media="screen">
+    html{
+      background-image:url(https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    }
+    body{
+      text-align:center;
+    }
+    h1{
+      font-family: 'Playfair Display', serif;
+      text-align:center;
+      color:white;
+      font-size:1.5em;
+    }
+    .form{
+      border:0.2em solid #cb1fd1;
+      border-radius:1em;
+      width:60em;
+      margin: 0 auto;
+      text-align:center;
+      background:rgb(255,255,255,0.8);
+    }
+    .form h3{
+      font-family: 'Playfair Display', serif;
+      font-size:1.5em;
+    }
+    .form p{
+      text-align:left;
+      font-size:1em;
+      color:black;
+      font-family: 'Libre Franklin', sans-serif;
+    }
+    .form input{
+      text-align:left;
+      width:90%;
+      height:2em;
+      font-size:1em;
+      color:black;
+      outline:none;
+      transition:0.5s;
+      margin-bottom:2em;
+      background:rgb(255,255,255,0);
+      border:none;
+        border-bottom:0.1em solid #cb1fd1;
+    }
+    .form input:focus{
+      border-bottom:0.1em solid #fb522c;
+    }
+    .sub{
+      background-color: #fabfe5;
+      color: #2c1786;
+      width:8em;
+      height: 3em;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 2em;
+        font-family: 'Libre Franklin', sans-serif;
+    }
+  </style>
+  <body>
+    <h1><%=questions[0].name %></h1>
+    <form method="post">
+    <div class="form">
+        <h3>Description</h3>
+        <% for(var i=0;i<questions.length;i++){%>
+          <p><%= questions[i].question %></p><br>
+          <input type=<%= questions[i].type %> name=<%= "a"+i %> value="" placeholder="type your answer here">
+        <%}%>
+    </div>
+     <button type="submit" name="submit" formaction="submitted" class="sub" value=<%= formid%>>Submit</button>
+   </form>
+  </body>
+</html>
